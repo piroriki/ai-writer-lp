@@ -123,18 +123,6 @@
     border-radius: 22px;
     box-shadow: 0 24px 70px rgba(0,0,0,.24);
   }
-  .chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border: 1px solid rgba(252,165,165,.24);
-    color: var(--wine-soft);
-    background: rgba(127,29,29,.18);
-    border-radius: 999px;
-    padding: 7px 12px;
-    font-size: 12px;
-    font-weight: 800;
-  }
   .tag {
     display: inline-flex;
     border: 1px solid var(--line2);
@@ -144,7 +132,6 @@
     font-size: 11px;
     white-space: nowrap;
   }
-  /* HERO */
   .hero {
     min-height: 100svh;
     display: grid;
@@ -287,7 +274,6 @@
     color: var(--muted);
     font-size: 12px;
   }
-  /* PAIN */
   .pain-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -331,7 +317,6 @@
     color: var(--muted);
     font-size: 14px;
   }
-  /* SERVICES */
   .services {
     background: rgba(255,255,255,.025);
   }
@@ -366,7 +351,6 @@
     gap: 8px;
     flex-wrap: wrap;
   }
-  /* DEMO */
   .demo-wrap {
     display: grid;
     gap: 20px;
@@ -404,7 +388,6 @@
     color: var(--muted);
     font-size: 14px;
   }
-  /* REASONS */
   .reason-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -432,7 +415,6 @@
     color: var(--muted);
     font-size: 14px;
   }
-  /* PORTFOLIO */
   .portfolio-grid {
     display: grid;
     gap: 16px;
@@ -468,7 +450,6 @@
     font-weight: 900;
     white-space: nowrap;
   }
-  /* FLOW */
   .flow-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -495,7 +476,6 @@
     color: var(--muted);
     font-size: 14px;
   }
-  /* CTA */
   .final-cta {
     padding: 100px 0;
     background:
@@ -542,7 +522,6 @@
     font-size: 12px;
     text-align: center;
   }
-  /* PRINT */
   @media print {
     * {
       -webkit-print-color-adjust: exact !important;
@@ -560,7 +539,6 @@
       box-shadow: none !important;
     }
   }
-  /* RESPONSIVE */
   @media (max-width: 840px) {
     .hero-grid {
       grid-template-columns: 1fr;
@@ -667,7 +645,7 @@
               <div class="visual-icon">⚙️</div>
               <div>
                 <div class="visual-title">AI / IT / DX・業務改善</div>
-                <div class="visual-text">専門領域を、読者目線の一次情報コラムへ</div>
+                <div class="visual-text">専門領域を、読者目線の記事へ</div>
               </div>
             </div>
             <div class="visual-item">
@@ -859,7 +837,8 @@
         <div class="eyebrow">My Work Portfolio</div>
         <h2>制作実績・サンプル</h2>
         <p class="section-lead">
-          記事作成、構成案、リライト、改善提案など、公開可能な範囲でサンプルをご提示できます。
+          記事作成、構成案、リライト、改善提案など、対応内容が分かるサンプルをまとめています。
+          ご依頼前の判断材料としてご確認ください。
         </p>
       </div>
       <div class="portfolio-grid">
@@ -867,41 +846,33 @@
           <div>
             <span class="portfolio-label">AIライティング・校正</span>
             <h3>AIライティング品質チェック記事</h3>
-            <p>AI生成記事を公開前に確認すべきポイントを整理。検索意図、ファクトチェック、断定表現、CTA、著作権リスクまで網羅。</p>
+            <p>AI生成記事を公開・納品前に確認すべきポイントを整理したサンプルです。検索意図、ファクトチェック、断定表現、CTA、著作権リスクなどを扱っています。</p>
           </div>
-          <a class="portfolio-link" href="#contact">サンプルをリクエスト →</a>
+          <a class="portfolio-link" href="https://docs.google.com/document/d/1F9bBMSDDQXmIOa788tYB1xPKkrmsgqjMG3WIvi3fG_E/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">サンプルを見る →</a>
         </div>
         <div class="portfolio-card card">
           <div>
             <span class="portfolio-label">リライト・文章改善</span>
             <h3>AI文章 Before / After 改善サンプル</h3>
-            <p>AIっぽい文章を、読者に伝わる文章へ整えた改善例。重複削除、具体例追加、CTA改善を収録。</p>
+            <p>AIが作成した文章を、読者に伝わる文章へ整えた改善例です。重複表現の整理、具体例の追加、読者の悩みを踏まえたCTA改善を行っています。</p>
           </div>
-          <a class="portfolio-link" href="#contact">サンプルをリクエスト →</a>
+          <a class="portfolio-link" href="https://drive.google.com/file/d/1NSieb2YiDY-QZkTKQU_dgWzAoX6X-6Ta/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">サンプルを見る →</a>
         </div>
         <div class="portfolio-card card">
           <div>
             <span class="portfolio-label">RPA・DX</span>
             <h3>RPA・業務改善コラム</h3>
-            <p>RPA導入が失敗しやすい原因と、業務効率化を定着させるポイントを、本業経験をもとに執筆。</p>
+            <p>RPA導入が失敗しやすい原因や、業務効率化を現場に定着させるポイントをまとめた記事です。本業での業務自動化経験をもとに作成しています。</p>
           </div>
-          <a class="portfolio-link" href="#contact">サンプルをリクエスト →</a>
+          <a class="portfolio-link" href="https://docs.google.com/document/d/1FHw0_uBaWwPCpph6wan_QRlSe1RuNIKMjSlJf23ffBs/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">サンプルを見る →</a>
         </div>
         <div class="portfolio-card card">
           <div>
             <span class="portfolio-label">SEO構成設計</span>
             <h3>SEO構成案サンプル</h3>
-            <p>検索意図と読者の悩みを整理し、見出し構成、本文で扱う情報、CTAまで設計したサンプル。</p>
+            <p>検索意図と読者の悩みを整理し、見出し構成、本文で扱う情報、CTAまで設計したサンプルです。記事制作前の設計力を確認いただけます。</p>
           </div>
-          <a class="portfolio-link" href="#contact">サンプルをリクエスト →</a>
-        </div>
-        <div class="portfolio-card card">
-          <div>
-            <span class="portfolio-label">記事改善提案</span>
-            <h3>記事改善提案資料</h3>
-            <p>既存記事のタイトル、見出し、本文構成、CTA改善点を整理し、読みやすさと導線改善を目的に作成。</p>
-          </div>
-          <a class="portfolio-link" href="#contact">サンプルをリクエスト →</a>
+          <a class="portfolio-link" href="https://drive.google.com/file/d/1fw_W1sO_7fQ1kjmCR0ZtC-4X5-j06osw/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">サンプルを見る →</a>
         </div>
       </div>
     </div>
@@ -955,7 +926,7 @@
           <span>既存記事のCTAやリード文を改善したい</span>
           <span>LP原稿やサービス紹介文を整えたい</span>
         </div>
-        <a class="btn" href="https://forms.gle/BbCLpfE6ndu3j4fz9">問い合わせフォームへ進む</a>
+        <a class="btn" href="https://forms.gle/BbCLpfE6ndu3j4fz9" target="_blank" rel="noopener noreferrer">問い合わせフォームへ進む</a>
       </div>
     </div>
   </section>
