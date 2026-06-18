@@ -1,1 +1,967 @@
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI・IT・業務改善に強いSEOライター｜ポートフォリオLP</title>
+<style>
+  :root {
+    --bg: #080B12;
+    --bg2: #0D111C;
+    --panel: #111827;
+    --panel2: #151B2A;
+    --ink: #F9FAFB;
+    --muted: #A7AFBF;
+    --muted2: #6B7280;
+    --line: rgba(255,255,255,.10);
+    --line2: rgba(255,255,255,.16);
+    --white: #FFFFFF;
+    --wine: #7F1D1D;
+    --wine2: #991B1B;
+    --wine3: #B91C1C;
+    --wine-soft: #FCA5A5;
+    --gold: #D6B16A;
+    --bluegray: #94A3B8;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(127,29,29,.32), transparent 32%),
+      radial-gradient(circle at 80% 10%, rgba(214,177,106,.12), transparent 28%),
+      var(--bg);
+    color: var(--ink);
+    line-height: 1.75;
+    letter-spacing: .02em;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .page {
+    overflow: hidden;
+  }
+  .container {
+    width: min(1080px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+  section {
+    padding: 88px 0;
+  }
+  .section-head {
+    text-align: center;
+    margin-bottom: 42px;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--wine-soft);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: var(--wine3);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(185,28,28,.9);
+  }
+  h1, h2, h3 {
+    line-height: 1.28;
+    letter-spacing: -.02em;
+  }
+  h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+  }
+  .section-lead {
+    color: var(--muted);
+    max-width: 760px;
+    margin: 16px auto 0;
+    font-size: 15px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--wine3), var(--wine));
+    color: var(--white);
+    font-weight: 900;
+    border-radius: 12px;
+    padding: 16px 26px;
+    min-height: 54px;
+    box-shadow: 0 16px 40px rgba(127,29,29,.35);
+    border: 1px solid rgba(255,255,255,.12);
+    transition: transform .2s ease, filter .2s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+  }
+  .btn.secondary {
+    background: rgba(255,255,255,.06);
+    box-shadow: none;
+    color: var(--ink);
+  }
+  .card {
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025));
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: 0 24px 70px rgba(0,0,0,.24);
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(252,165,165,.24);
+    color: var(--wine-soft);
+    background: rgba(127,29,29,.18);
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .tag {
+    display: inline-flex;
+    border: 1px solid var(--line2);
+    color: var(--muted);
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  /* HERO */
+  .hero {
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 74px 0 80px;
+    position: relative;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(252,165,165,.34), transparent);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.08fr .92fr;
+    gap: 42px;
+    align-items: center;
+  }
+  .hero-copy {
+    position: relative;
+    z-index: 1;
+  }
+  .hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    color: var(--muted);
+    border: 1px solid var(--line2);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+  }
+  .hero-title {
+    font-size: clamp(38px, 7vw, 72px);
+    font-weight: 950;
+    margin-bottom: 22px;
+  }
+  .hero-title .accent {
+    color: var(--wine-soft);
+    text-shadow: 0 0 36px rgba(185,28,28,.30);
+  }
+  .hero-sub {
+    color: var(--muted);
+    font-size: clamp(15px, 2.2vw, 18px);
+    max-width: 660px;
+    margin-bottom: 30px;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .proof-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .proof-card {
+    padding: 18px 16px;
+    border-radius: 18px;
+    background: rgba(255,255,255,.055);
+    border: 1px solid var(--line);
+  }
+  .proof-num {
+    color: var(--wine-soft);
+    font-size: clamp(24px, 4vw, 34px);
+    font-weight: 950;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .proof-label {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.45;
+  }
+  .hero-visual {
+    padding: 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 16px;
+    margin-bottom: 18px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .dot.red { background: #EF4444; }
+  .dot.yellow { background: #F59E0B; }
+  .dot.green { background: #10B981; }
+  .url {
+    margin-left: auto;
+    color: var(--muted2);
+    font-size: 11px;
+    border: 1px solid var(--line);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .visual-list {
+    display: grid;
+    gap: 12px;
+  }
+  .visual-item {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+    align-items: center;
+    background: rgba(0,0,0,.18);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 14px;
+  }
+  .visual-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: rgba(127,29,29,.28);
+    color: var(--wine-soft);
+  }
+  .visual-title {
+    font-weight: 900;
+    font-size: 14px;
+  }
+  .visual-text {
+    color: var(--muted);
+    font-size: 12px;
+  }
+  /* PAIN */
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .pain-card {
+    padding: 24px;
+  }
+  .pain-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: rgba(127,29,29,.24);
+    color: var(--wine-soft);
+    margin-bottom: 18px;
+    font-size: 20px;
+  }
+  .pain-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .pain-card p {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .message-box {
+    margin-top: 22px;
+    padding: 26px;
+    border-radius: 22px;
+    border: 1px solid rgba(252,165,165,.20);
+    background: linear-gradient(135deg, rgba(127,29,29,.18), rgba(255,255,255,.03));
+  }
+  .message-box strong {
+    color: var(--white);
+    font-size: 18px;
+  }
+  .message-box p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  /* SERVICES */
+  .services {
+    background: rgba(255,255,255,.025);
+  }
+  .service-grid {
+    display: grid;
+    gap: 18px;
+  }
+  .service-card {
+    padding: 28px;
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+  .service-num {
+    color: var(--wine-soft);
+    font-size: 13px;
+    font-weight: 950;
+    letter-spacing: .14em;
+  }
+  .service-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .service-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  /* DEMO */
+  .demo-wrap {
+    display: grid;
+    gap: 20px;
+  }
+  .demo-card {
+    padding: 26px;
+  }
+  .demo-label {
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--wine-soft);
+    margin-bottom: 12px;
+  }
+  .demo-card.before {
+    border-color: rgba(252,165,165,.22);
+  }
+  .demo-card.after {
+    border-color: rgba(214,177,106,.30);
+    background: linear-gradient(180deg, rgba(214,177,106,.06), rgba(255,255,255,.025));
+  }
+  .demo-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .demo-card p {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .demo-point {
+    padding: 18px 20px;
+    border-radius: 18px;
+    background: rgba(127,29,29,.14);
+    border: 1px solid rgba(252,165,165,.18);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  /* REASONS */
+  .reason-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .reason-card {
+    padding: 28px;
+  }
+  .reason-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: rgba(127,29,29,.24);
+    color: var(--wine-soft);
+    margin-bottom: 18px;
+    font-size: 22px;
+  }
+  .reason-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .reason-card p {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  /* PORTFOLIO */
+  .portfolio-grid {
+    display: grid;
+    gap: 16px;
+  }
+  .portfolio-card {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: center;
+  }
+  .portfolio-label {
+    display: inline-flex;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(127,29,29,.22);
+    color: var(--wine-soft);
+    font-size: 11px;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+  .portfolio-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .portfolio-card p {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .portfolio-link {
+    color: var(--wine-soft);
+    font-size: 13px;
+    font-weight: 900;
+    white-space: nowrap;
+  }
+  /* FLOW */
+  .flow-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .flow-card {
+    padding: 24px;
+  }
+  .step {
+    display: inline-flex;
+    background: var(--wine2);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 950;
+    margin-bottom: 14px;
+  }
+  .flow-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .flow-card p {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  /* CTA */
+  .final-cta {
+    padding: 100px 0;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(127,29,29,.35), transparent 45%),
+      #070A11;
+  }
+  .cta-panel {
+    max-width: 840px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 46px 28px;
+    border-radius: 28px;
+    border: 1px solid rgba(252,165,165,.20);
+    background: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025));
+    box-shadow: 0 28px 90px rgba(0,0,0,.36);
+  }
+  .cta-panel h2 {
+    margin-bottom: 14px;
+  }
+  .cta-panel p {
+    color: var(--muted);
+    max-width: 660px;
+    margin: 0 auto 26px;
+    font-size: 15px;
+  }
+  .cta-list {
+    display: inline-grid;
+    gap: 8px;
+    text-align: left;
+    margin-bottom: 30px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .cta-list span::before {
+    content: "✓";
+    color: var(--wine-soft);
+    margin-right: 9px;
+    font-weight: 950;
+  }
+  footer {
+    padding: 32px 0;
+    border-top: 1px solid var(--line);
+    color: var(--muted2);
+    font-size: 12px;
+    text-align: center;
+  }
+  /* PRINT */
+  @media print {
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    body {
+      background: var(--bg) !important;
+      color: var(--ink) !important;
+    }
+    section {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .btn {
+      box-shadow: none !important;
+    }
+  }
+  /* RESPONSIVE */
+  @media (max-width: 840px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-visual {
+      order: 2;
+    }
+    .proof-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .pain-grid,
+    .reason-grid,
+    .flow-grid {
+      grid-template-columns: 1fr;
+    }
+    .portfolio-card {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 560px) {
+    .container {
+      width: min(100% - 32px, 1080px);
+    }
+    section {
+      padding: 70px 0;
+    }
+    .hero {
+      padding-top: 58px;
+    }
+    .hero-title {
+      font-size: clamp(34px, 12vw, 48px);
+    }
+    .hero-actions {
+      display: grid;
+    }
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+    .proof-row {
+      gap: 10px;
+    }
+    .proof-card {
+      padding: 16px 14px;
+    }
+    .service-card {
+      grid-template-columns: 1fr;
+      padding: 24px;
+    }
+    .card {
+      border-radius: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker">SEO WRITER / AI CONTENT SPECIALIST</div>
+          <h1 class="hero-title">
+            AI・IT・業務改善の<br>
+            <span class="accent">「伝わらない」</span>を<br>
+            読者が動く記事へ。
+          </h1>
+          <p class="hero-sub">
+            RPA・業務自動化の現場経験と累計400本以上の記事制作経験をもとに、
+            専門的な情報を「読まれる・理解される・次の行動につながる」文章へ整えます。
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">記事作成・改善を相談する</a>
+            <a class="btn secondary" href="#portfolio">実績・サンプルを見る</a>
+          </div>
+          <div class="proof-row">
+            <div class="proof-card">
+              <div class="proof-num">400本+</div>
+              <div class="proof-label">累計記事制作</div>
+            </div>
+            <div class="proof-card">
+              <div class="proof-num">6年</div>
+              <div class="proof-label">RPA・業務自動化<br>実務経験</div>
+            </div>
+            <div class="proof-card">
+              <div class="proof-num">2年</div>
+              <div class="proof-label">Webライター歴</div>
+            </div>
+            <div class="proof-card">
+              <div class="proof-num">AI</div>
+              <div class="proof-label">記事チェック<br>対応可能</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual card">
+          <div class="browser-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="url">portfolio-lp.html</span>
+          </div>
+          <div class="visual-list">
+            <div class="visual-item">
+              <div class="visual-icon">⚙️</div>
+              <div>
+                <div class="visual-title">AI / IT / DX・業務改善</div>
+                <div class="visual-text">専門領域を、読者目線の一次情報コラムへ</div>
+              </div>
+            </div>
+            <div class="visual-item">
+              <div class="visual-icon">🔍</div>
+              <div>
+                <div class="visual-title">AI記事校正・ファクトチェック</div>
+                <div class="visual-text">生成AIの下書きを人の目で納品品質へ</div>
+              </div>
+            </div>
+            <div class="visual-item">
+              <div class="visual-icon">🧭</div>
+              <div>
+                <div class="visual-title">SEO構成・CTA設計</div>
+                <div class="visual-text">検索意図から読後の行動まで逆算</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="pain">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Pain Points</div>
+        <h2>コンテンツ制作で、こんなお悩みはありませんか？</h2>
+        <p class="section-lead">
+          AI・IT・業務改善領域は、情報の正確性だけでなく「読者にどう伝えるか」で成果が変わりやすい分野です。
+        </p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card card">
+          <div class="pain-icon">!</div>
+          <h3>専門用語が多く、読者に伝わらない</h3>
+          <p>AIやITの記事を分かりやすくしたいのに、説明が難しくなり、初心者に届きにくい。</p>
+        </div>
+        <div class="pain-card card">
+          <div class="pain-icon">AI</div>
+          <h3>AI記事の品質が不安</h3>
+          <p>AIで下書きは作れるが、事実誤認・不自然な表現・重複が残っていないか不安。</p>
+        </div>
+        <div class="pain-card card">
+          <div class="pain-icon">↘</div>
+          <h3>既存記事の訴求やCTAが弱い</h3>
+          <p>公開済み記事はあるものの、読みにくく、問い合わせや資料請求への導線が弱い。</p>
+        </div>
+        <div class="pain-card card">
+          <div class="pain-icon">⚙️</div>
+          <h3>現場感のあるライターが見つからない</h3>
+          <p>RPA・DX・業務改善を、机上の説明ではなく実務に近い温度で書ける人が必要。</p>
+        </div>
+      </div>
+      <div class="message-box">
+        <strong>情報を並べるだけでは、読者は動きません。</strong>
+        <p>
+          大切なのは、読者が「自分に関係がある」と感じ、次に何をすればいいか分かる記事に整えることです。
+          専門知識を、読者の理解と行動につながる文章へ翻訳します。
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Services Offered</div>
+        <h2>提供できるサービス</h2>
+        <p class="section-lead">
+          SEO記事作成から、AI下書きチェック、既存記事リライト、LP原稿まで、目的に合わせて対応します。
+        </p>
+      </div>
+      <div class="service-grid">
+        <div class="service-card card">
+          <div class="service-num">01</div>
+          <div>
+            <h3>AI・IT系SEO記事作成</h3>
+            <p>検索意図を整理し、読者が知りたい情報に過不足なく答える記事を作成します。専門用語は想定読者の理解度に合わせて調整します。</p>
+            <div class="tags">
+              <span class="tag">AI活用</span><span class="tag">RPA</span><span class="tag">DX</span><span class="tag">IT導入</span><span class="tag">BtoB</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-card card">
+          <div class="service-num">02</div>
+          <div>
+            <h3>SEO記事構成案作成</h3>
+            <p>キーワードや想定読者をもとに、検索意図・読者の悩み・CTAまで逆算した見出し構成を作成します。</p>
+            <div class="tags">
+              <span class="tag">検索意図</span><span class="tag">見出し構成</span><span class="tag">CTA設計</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-card card">
+          <div class="service-num">03</div>
+          <div>
+            <h3>AI記事の品質チェック・リライト</h3>
+            <p>AIで作成した文章を、公開前に人の目で確認。事実誤認、不自然な表現、重複、CTAの弱さを整えます。</p>
+            <div class="tags">
+              <span class="tag">ファクトチェック</span><span class="tag">AIっぽさ軽減</span><span class="tag">読者目線</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-card card">
+          <div class="service-num">04</div>
+          <div>
+            <h3>既存記事の改善・リライト</h3>
+            <p>既存記事の分かりにくさ、重複表現、導線の弱さを見直し、読みやすさと行動導線を改善します。</p>
+            <div class="tags">
+              <span class="tag">タイトル改善</span><span class="tag">冗長整理</span><span class="tag">CTA強化</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-card card">
+          <div class="service-num">05</div>
+          <div>
+            <h3>LP原稿・サービス紹介文作成</h3>
+            <p>サービスの特徴や強みを整理し、ファーストビュー、悩み訴求、CTAまで一貫した文章構成を作成します。</p>
+            <div class="tags">
+              <span class="tag">FVコピー</span><span class="tag">強み整理</span><span class="tag">CTA文言</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="demo">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Skill Demonstration</div>
+        <h2>AI文章を、読者に届く文章へ整える</h2>
+        <p class="section-lead">
+          一見きれいなAI文章でも、読者の悩みや行動導線が不足していることがあります。
+          具体性・構成・CTAを加え、記事として機能する文章へ改善します。
+        </p>
+      </div>
+      <div class="demo-wrap">
+        <div class="demo-card before card">
+          <div class="demo-label">Before：AI下書きのまま</div>
+          <h3>AIやRPAは、現代のビジネスにおいて重要なツールです。</h3>
+          <p>
+            導入することで業務効率化を実現し、生産性を向上させることができます。
+            今後も重要性は高まっていくでしょう。
+          </p>
+        </div>
+        <div class="demo-point">
+          課題：一般論が中心で、読者が「自社で何をすればよいか」を想像しにくい。具体例や次の行動も不足しています。
+        </div>
+        <div class="demo-card after card">
+          <div class="demo-label">After：人の目で改善</div>
+          <h3>AIやRPAは、導入して終わりではありません。</h3>
+          <p>
+            現場で使われなければ、業務効率化にはつながりません。
+            まずは請求書処理、データ入力、定型レポート作成など、繰り返し発生する業務から洗い出すと、改善効果を確認しやすくなります。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="reasons">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Why Choose Me</div>
+        <h2>選ばれる3つの理由</h2>
+        <p class="section-lead">
+          現場経験、読者目線、AI活用。記事制作に必要な3つの視点を組み合わせて対応します。
+        </p>
+      </div>
+      <div class="reason-grid">
+        <div class="reason-card card">
+          <div class="reason-icon">⚙️</div>
+          <h3>現場経験6年の専門知識</h3>
+          <p>RPA・業務自動化、社内SE、WMS導入、業務フロー整理を経験。机上の知識ではなく、実務に近い視点で書けます。</p>
+        </div>
+        <div class="reason-card card">
+          <div class="reason-icon">🔤</div>
+          <h3>専門用語を伝わる言葉へ</h3>
+          <p>AI、RPA、DX、SEOなどの言葉を、読者の理解度に合わせて調整。初心者向けからBtoB向けまで対応します。</p>
+        </div>
+        <div class="reason-card card">
+          <div class="reason-icon">🔍</div>
+          <h3>AI活用と人の目で品質管理</h3>
+          <p>AIは下書きや整理に活用し、最終的なファクトチェック、表現調整、読者目線の確認は人の目で行います。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services" id="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">My Work Portfolio</div>
+        <h2>制作実績・サンプル</h2>
+        <p class="section-lead">
+          記事作成、構成案、リライト、改善提案など、公開可能な範囲でサンプルをご提示できます。
+        </p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card card">
+          <div>
+            <span class="portfolio-label">AIライティング・校正</span>
+            <h3>AIライティング品質チェック記事</h3>
+            <p>AI生成記事を公開前に確認すべきポイントを整理。検索意図、ファクトチェック、断定表現、CTA、著作権リスクまで網羅。</p>
+          </div>
+          <a class="portfolio-link" href="#contact">サンプルをリクエスト →</a>
+        </div>
+        <div class="portfolio-card card">
+          <div>
+            <span class="portfolio-label">リライト・文章改善</span>
+            <h3>AI文章 Before / After 改善サンプル</h3>
+            <p>AIっぽい文章を、読者に伝わる文章へ整えた改善例。重複削除、具体例追加、CTA改善を収録。</p>
+          </div>
+          <a class="portfolio-link" href="#contact">サンプルをリクエスト →</a>
+        </div>
+        <div class="portfolio-card card">
+          <div>
+            <span class="portfolio-label">RPA・DX</span>
+            <h3>RPA・業務改善コラム</h3>
+            <p>RPA導入が失敗しやすい原因と、業務効率化を定着させるポイントを、本業経験をもとに執筆。</p>
+          </div>
+          <a class="portfolio-link" href="#contact">サンプルをリクエスト →</a>
+        </div>
+        <div class="portfolio-card card">
+          <div>
+            <span class="portfolio-label">SEO構成設計</span>
+            <h3>SEO構成案サンプル</h3>
+            <p>検索意図と読者の悩みを整理し、見出し構成、本文で扱う情報、CTAまで設計したサンプル。</p>
+          </div>
+          <a class="portfolio-link" href="#contact">サンプルをリクエスト →</a>
+        </div>
+        <div class="portfolio-card card">
+          <div>
+            <span class="portfolio-label">記事改善提案</span>
+            <h3>記事改善提案資料</h3>
+            <p>既存記事のタイトル、見出し、本文構成、CTA改善点を整理し、読みやすさと導線改善を目的に作成。</p>
+          </div>
+          <a class="portfolio-link" href="#contact">サンプルをリクエスト →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="flow">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Process Workflow</div>
+        <h2>ご相談から納品までの流れ</h2>
+        <p class="section-lead">
+          目的や読者像を確認しながら、認識のズレが起きないよう丁寧に進行します。
+        </p>
+      </div>
+      <div class="flow-grid">
+        <div class="flow-card card">
+          <span class="step">STEP 01</span>
+          <h3>ご相談・ヒアリング</h3>
+          <p>記事の目的、テーマ、ターゲット読者、文字数、納期、納品形式を確認します。</p>
+        </div>
+        <div class="flow-card card">
+          <span class="step">STEP 02</span>
+          <h3>構成案作成・確認</h3>
+          <p>必要に応じて、検索意図や読者の悩みを整理した見出し構成をご提案します。</p>
+        </div>
+        <div class="flow-card card">
+          <span class="step">STEP 03</span>
+          <h3>執筆・編集</h3>
+          <p>構成に沿って本文を作成。AIを使う場合も、最終確認は人の目で行います。</p>
+        </div>
+        <div class="flow-card card">
+          <span class="step">STEP 04</span>
+          <h3>納品・修正対応</h3>
+          <p>納品後、事前に確認した範囲で修正に対応します。公開後の調整もご相談可能です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="final-cta" id="contact">
+    <div class="container">
+      <div class="cta-panel">
+        <div class="eyebrow">Free Consultation</div>
+        <h2>小さなご相談からでも、<br>お気軽にどうぞ。</h2>
+        <p>
+          「AIで作った記事が読みにくいので見てほしい」
+          「IT専門用語が多すぎて読者に伝わらない」
+          「既存記事のCTAを改善したい」など、目的が未定の段階でもご相談いただけます。
+        </p>
+        <div class="cta-list">
+          <span>AI・IT系のSEO記事を作成・改善したい</span>
+          <span>AI生成記事を公開前にチェックしたい</span>
+          <span>既存記事のCTAやリード文を改善したい</span>
+          <span>LP原稿やサービス紹介文を整えたい</span>
+        </div>
+        <a class="btn" href="ここにGoogleフォームのURLを入れてください">問い合わせフォームへ進む</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    © SEO WRITER / AI CONTENT SPECIALIST Portfolio. Designed as a portfolio LP sample.
+  </footer>
+</div>
+</body>
+</html>
